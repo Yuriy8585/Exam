@@ -1,9 +1,13 @@
 import React from "react";
 
-const SideMenu = (props) => {
+
+function SideMenu() {
+    
+    
     return (
         <div
             // className="mobile-menu"
+            
         >
             <div className="mobile-menu__link-site">
                 <a href="registration.html">
@@ -35,89 +39,98 @@ const SideMenu = (props) => {
                     </svg>
                 </a>
             </div>
-            <h3 className="mobile-menu__heading">MENU</h3>
-            <div className="mobile-menu__box">
-                <div className="mobile-menu__item">
-                    <a href="catalog.html" className="mobile-menu__title">
-                        MAN
-                    </a>
-                    <ul className="mobile-menu__list">
-                        <li>
-                            <a className="mobile-menu__link" href="#">
-                                Accessories
-                            </a>
-                        </li>
-                        <li>
-                            <a className="mobile-menu__link" href="#">
-                                Bags
-                            </a>
-                        </li>
-                        <li>
-                            <a className="mobile-menu__link" href="#">
-                                Denim
-                            </a>
-                        </li>
-                        <li>
-                            <a className="mobile-menu__link" href="#">
-                                T-Shirts
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="mobile-menu__item">
-                    <a href="catalog_w.html" className="mobile-menu__title">
-                        WOMAN
-                    </a>
-                    <ul className="mobile-menu__list">
-                        <li>
-                            <a className="mobile-menu__link" href="">
-                                Accessories
-                            </a>
-                        </li>
-                        <li>
-                            <a className="mobile-menu__link" href="">
-                                Bags
-                            </a>
-                        </li>
-                        <li>
-                            <a className="mobile-menu__link" href="">
-                                Denim
-                            </a>
-                        </li>
-                        <li>
-                            <a className="mobile-menu__link" href="">
-                                T-Shirts
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="mobile-menu__item">
-                    <a href="catalog_k.html" className="mobile-menu__title">
-                        KIDS
-                    </a>
-                    <ul className="mobile-menu__list">
-                        <li>
-                            <a className="mobile-menu__link" href="">
-                                Accessories
-                            </a>
-                        </li>
-                        <li>
-                            <a className="mobile-menu__link" href="">
-                                Bags
-                            </a>
-                        </li>
-                        <li>
-                            <a className="mobile-menu__link" href="">
-                                Denim
-                            </a>
-                        </li>
-                        <li>
-                            <a className="mobile-menu__link" href="">
-                                T-Shirts
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+            
+            
+                <div className="mobile-menu__box">
+            
+                    <details className="mobile-menu__box" open="">
+                    <summary classname="mobile-menu__box__summary">
+                    MENU{""}
+                    
+                    </summary>
+                    <div className="mobile-menu__item">
+                        <a href="catalog.html" className="mobile-menu__title">
+                            MAN
+                        </a>
+                        <ul className="mobile-menu__list">
+                            <li>
+                                <a className="mobile-menu__link" href="#">
+                                    Accessories
+                                </a>
+                            </li>
+                            <li>
+                                <a className="mobile-menu__link" href="#">
+                                    Bags
+                                </a>
+                            </li>
+                            <li>
+                                <a className="mobile-menu__link" href="#">
+                                    Denim
+                                </a>
+                            </li>
+                            <li>
+                                <a className="mobile-menu__link" href="#">
+                                    T-Shirts
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="mobile-menu__item">
+                        <a href="catalog_w.html" className="mobile-menu__title">
+                            WOMAN
+                        </a>
+                        <ul className="mobile-menu__list">
+                            <li>
+                                <a className="mobile-menu__link" href="">
+                                    Accessories
+                                </a>
+                            </li>
+                            <li>
+                                <a className="mobile-menu__link" href="">
+                                    Bags
+                                </a>
+                            </li>
+                            <li>
+                                <a className="mobile-menu__link" href="">
+                                    Denim
+                                </a>
+                            </li>
+                            <li>
+                                <a className="mobile-menu__link" href="">
+                                    T-Shirts
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="mobile-menu__item">
+                        <a href="catalog_k.html" className="mobile-menu__title">
+                            KIDS
+                        </a>
+                        <ul className="mobile-menu__list">
+                            <li>
+                                <a className="mobile-menu__link" href="">
+                                    Accessories
+                                </a>
+                            </li>
+                            <li>
+                                <a className="mobile-menu__link" href="">
+                                    Bags
+                                </a>
+                            </li>
+                            <li>
+                                <a className="mobile-menu__link" href="">
+                                    Denim
+                                </a>
+                            </li>
+                            <li>
+                                <a className="mobile-menu__link" href="">
+                                    T-Shirts
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                
+                </details>
             </div>
         </div>
     )

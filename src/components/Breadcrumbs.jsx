@@ -6,7 +6,8 @@ const Breadcrumbs = (props) => {
         <h2 className="head__heading">WELCOME</h2>
         <div className="breadcrumb">
             <div className="breadcrumb__box-link">
-                <Link className="breadcrumb__link" to="/">HOME</Link>
+                <Link className="breadcrumb__link" to="/HOME">HOME</Link>
+
             </div>
             <div className="breadcrumb__box-link">
                 <Link className="breadcrumb__link" to="/MEN">MEN</Link>

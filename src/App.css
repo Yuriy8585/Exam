@@ -846,7 +846,7 @@ summary::-webkit-details-marker {
 
 .button {
   width: 212px;
-  height: 48px;
+  height: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

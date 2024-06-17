@@ -1,12 +1,16 @@
 import React from 'react';
-import {BrowserRouter} from 'react-router-dom'
-import Breadcrumbs from "./Breadcrumbs";
+import HomePage from './HomePage';
+
+
+
 
 const Home = (props) => {
 
     return (
         <div>
-
+            
+            <HomePage/>
+            
         </div>
     )
 
