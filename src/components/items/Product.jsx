@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Product () {
 
     return (
@@ -37,8 +39,9 @@ function Product () {
                             fill="white"
                         />
                         </svg>
-                        Add to Cart
+                        <button>Add to cart</button>
                     </a>
+                    
                     </div>
                     <div className="product">
                     <img className="product__img" src="img/product1.jpg" alt="" />
@@ -84,7 +87,7 @@ function Product () {
                                 <input min="1" type="number" id="quantity" name="quantity" value="1" />
                                 <input type="submit" value="Add to cart" class="input-basket-submit" />
                             </form>                                 */}
-                        Add to cart
+                        <button>Add to cart</button>
                         </a>
                     </div>
                     </div>
@@ -121,7 +124,7 @@ function Product () {
                             fill="white"
                         />
                         </svg>
-                        Add to Cart
+                        <button>Add to cart</button>
                     </a>
                     </div>
                     <div className="product">

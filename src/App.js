@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import { Button } from '@mui/material';
 
 import Cart from './components/Cart';
+import Registration from './components/Registration';
 
 
 
@@ -40,7 +41,8 @@ function App() {
                                 
                             </label>
                             <a className=" header__link-site" href=" registration.html">
-                                <img src=" img/reg.svg" alt=" reg"/>
+                                <img src=" img/reg.svg" alt=" "/>
+                                <Link className="Registration" to="/REGISTRATION">Log in</Link>
                             </a>
                             <a className=" header__link-site" href="./Cart">
                                 
@@ -63,7 +65,7 @@ function App() {
                         <Route path="/WOMEN" element={<div>WOMEN</div>}/>
                         <Route path="/KIDS" element={<div>KIDS</div>}/>
                         <Route path="/NEW ARRIVALS" element={<div>NEW ARRIVALS</div>}/>
-                        
+                        <Route path="/REGISTRATION" element={<Registration/>}/>
                         <Route path="/404" element={<Page404/>}/>
                         <Route path="*" element={<Navigate replace to="/404"/>}/>
                     </Routes>
