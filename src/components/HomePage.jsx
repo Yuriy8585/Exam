@@ -2,6 +2,7 @@ import React from 'react';
 import Filter from './Filter';
 import Product from './items/Product';
 
+
 function HomePage() {
   return (
     <div>
@@ -12,7 +13,7 @@ function HomePage() {
       
         <section className="promo">
           <div className="promo__img">
-            <img src="img/promo.png" alt="photo promo" />
+            <img src="/my-app/src/img/promo.png" alt="photo promo" />
           </div>
           <div className="promo__content">
             <div className="promo__info">
@@ -24,7 +25,7 @@ function HomePage() {
         <section className="sale center">
           <div className="sale__item">
             <a className="header__link-site" href="catalog_w.html">
-              <img src="img/si1.jpg" alt="sale image" />
+              <img src="/my-app/src/img/si1.jpg" alt="sale image" />
             </a>
             <div className="sale__content">
               <p className="sale__text">30% OFF</p>

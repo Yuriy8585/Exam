@@ -1,9 +1,9 @@
 import React from 'react';
 import SideMenu from './SideMenu';
-import Product from './items/Product';
-import Filter from './Filter';
+import Filter from '../Filter';
+import KidsTools from './tools/Kids';
 
-function Catalog() {
+function CatalogKids() {
   return (
     <div>
      
@@ -17,15 +17,16 @@ function Catalog() {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Men</title>
-        <link rel="stylesheet" href="style.css" />
+        <title>KIDS</title>
+        
         <div className="top">
        
           <SideMenu/>
           <Filter/>
-          <Product/>
+          <KidsTools/>
           
           <section className="advantages center">
+          
             <article className="advantages__item">
               <img className="advantages__img" src="img/advantages-img.svg" alt="" />
               <h3 className="advantages__heading">Free Delivery</h3>
@@ -60,4 +61,4 @@ function Catalog() {
   );
 }
 
-export default Catalog;
+export default CatalogKids;

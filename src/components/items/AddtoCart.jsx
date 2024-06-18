@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Product() {
+function AddItem() {
   const [cart, setCart] = useState({});
 
   const addToCart = (itemId, quantity) => {
@@ -17,4 +17,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default AddItem;

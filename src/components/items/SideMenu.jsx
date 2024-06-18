@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from "react-router-dom";
 
 function SideMenu() {
     
@@ -50,7 +50,7 @@ function SideMenu() {
                     </summary>
                     <div className="mobile-menu__item">
                         <a href="catalog.html" className="mobile-menu__title">
-                            MAN
+                        <Link className="breadcrumb__link" to="/MEN">MEN</Link>
                         </a>
                         <ul className="mobile-menu__list">
                             <li>
@@ -77,7 +77,7 @@ function SideMenu() {
                     </div>
                     <div className="mobile-menu__item">
                         <a href="catalog_w.html" className="mobile-menu__title">
-                            WOMAN
+                        <Link className="breadcrumb__link" to="/WOMEN">WOMEN</Link>
                         </a>
                         <ul className="mobile-menu__list">
                             <li>
@@ -104,7 +104,7 @@ function SideMenu() {
                     </div>
                     <div className="mobile-menu__item">
                         <a href="catalog_k.html" className="mobile-menu__title">
-                            KIDS
+                        <Link className="breadcrumb__link" to="/KIDS">KIDS</Link>
                         </a>
                         <ul className="mobile-menu__list">
                             <li>
