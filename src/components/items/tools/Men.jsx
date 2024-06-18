@@ -1,4 +1,5 @@
 import React from 'react';
+import AddItem from '../AddtoCart';
 
 
 function MenTools() {
@@ -90,8 +91,10 @@ function MenTools() {
                       <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
                       <input min="1" type="number" id="quantity" name="quantity" value="1" />
                       <input type="submit" value="Add to cart" class="input-basket-submit" />
-                  </form>                                 */}
+                  </form> 
+                                                */}
           Add to cart
+          <AddItem/>
         </a>
       </div>
     </div>

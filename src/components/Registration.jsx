@@ -1,53 +1,71 @@
-import Rukesreg from "./items/RulesReg";
 
+import React, { useState } from 'react';
 
 
 function Registration () {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [errors, setErrors] = useState({});
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const errors = {};
+    if (username.trim() === '') {
+      errors.username = 'Username is required';
+    }
+    if (email.trim() === '') {
+      errors.email = 'Email is required';
+    }
+    if (password.trim() === '') {
+      errors.password = 'Password is required';
+    }
+    if (confirmPassword.trim() === '') {
+      errors.confirmPassword = 'Confirm password is required';
+    }
+    if (password!== confirmPassword) {
+      errors.confirmPassword = 'Passwords do not match';
+    }
+    setErrors(errors);
+    if (Object.keys(errors).length === 0) {
+      // Call API or perform registration logic here
+      console.log('Registration submitted:', { username, email, password, confirmPassword });
+    }
+  };
 
     return (
         <div>
   
-        <Rukesreg />
-    <div className="product">
-      <form id="registrationForm">
-        <p id="notice">Пожалуйста, прокрутите и прочитайте следующий текст.</p>
-        <p>
-          <textarea
-            id="rules"
-            defaultValue={
-              " /n Регистрируясь на сайте, я соглашаюсь со следующими условиями: \n  Условие 1 \n  Условие 2 \n ...\n  Условие 99\n  Условие 100 "
-            }
-          />
-        </p>
-        <p>
-          <input type="checkbox" id="agree" />
-          <label htmlFor="agree">Я согласен</label>
-          <br />
-          <input type="submit" id="nextstep" defaultValue="Далее" />
-        </p>
-      </form>
-      <form id="registrationForm">
-        <label htmlFor="username">Username:</label>
+       
+        <div>
+        <h1>Registration Page</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Username:
+          <input type="text" value={username} onChange={(event) => setUsername(event.target.value)} />
+          {errors.username && <div style={{ color: 'ed' }}>{errors.username}</div>}
+        </label>
         <br />
-        <input type="text" id="username" name="username" />
-        <span id="usernameError" />
+        <label>
+          Email:
+          <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} />
+          {errors.email && <div style={{ color: 'ed' }}>{errors.email}</div>}
+        </label>
         <br />
-        <label htmlFor="email">Email:</label>
+        <label>
+          Password:
+          <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
+          {errors.password && <div style={{ color: 'ed' }}>{errors.password}</div>}
+        </label>
         <br />
-        <input type="text" id="email" name="email" />
-        <span id="emailError" />
+        <label>
+          Confirm Password:
+          <input type="password" value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} />
+          {errors.confirmPassword && <div style={{ color: 'ed' }}>{errors.confirmPassword}</div>}
+        </label>
         <br />
-        <label htmlFor="password">Password:</label>
-        <br />
-        <input type="password" id="password" name="password" />
-        <span id="passwordError" />
-        <br />
-        <input
-          href="http://127.0.0.1:8000/"
-          type="submit"
-          defaultValue="Submit"
-        />
+        <button type="submit">Register</button>
       </form>
     </div>
   
