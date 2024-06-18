@@ -1,19 +1,20 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 
-function ProductCard({ product }) {
-  const [cartItems, setCartItems] = useState([]);
-  const handleAddToCart = useCallback(() => {
-    setCartItems([...cartItems, product]);
-  }, [cartItems, product]);
+function Product() {
+  const [cart, setCart] = useState({});
+
+  const addToCart = (itemId, quantity) => {
+    setCart({
+      ...cart,
+      [itemId]: (cart[itemId] || 0) + quantity
+    });
+  };
 
   return (
     <div>
-      <h1>{product.id}</h1>
-      <h2>{product.name}</h2>
-      <p>{product.price}</p>
-      <button onClick={handleAddToCart}>Добавить в корзину</button>
+      <button onClick={() => addToCart(1, 1)}>Add to cart</button>
     </div>
   );
 }
 
-export default ProductCard;
+export default Product;

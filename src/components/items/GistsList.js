@@ -48,7 +48,7 @@ const renderGist = useCallback(
 return (
     
     <div>
-        <h1>Shop box</h1>
+        <h1>Shop Items</h1>
         <br></br>
         <ul>{gists.map(renderGist)}</ul>
         <h1>{gists.id}<p className="product_name"></p></h1>
