@@ -14,7 +14,8 @@ import Registration from './components/Registration';
 import Catalog from './components/items/Catalog';
 import CatalogWomen from './components/items/CatalogWom';
 import CatalogKids from './components/items/CatalogKids';
-
+import logo from './img/logo.png';
+import search from './img/search.svg';
 
 
 
@@ -28,10 +29,10 @@ function App() {
                     <header className="header center">
                         <div className="header__left">
                             <a href="index.html">
-                                <img src="/my-app/src/img/logo.png" alt="logo"/>
+                            <img src={logo} alt="logo"/>
                             </a>
                             <a href="#">
-                                <img src="/my-app/src/img/search.svg" alt="search"/>
+                            <img src={search} alt="search"/>
                             </a>
                         </div>
                         <nav className="header__right">
