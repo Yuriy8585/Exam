@@ -3,7 +3,7 @@ import SideMenu from './SideMenu';
 import Filter from '../Filter';
 import MenTools from './tools/Men';
 
-function Catalog() {
+function Catalog(props) {
   return (
     <div>
      
@@ -23,7 +23,7 @@ function Catalog() {
        
           <SideMenu/>
           <Filter/>
-          <MenTools/>
+          <MenTools gistsArray={props.gistsArray}/>
           
           <section className="advantages center">
           

@@ -55,7 +55,7 @@ function HomePage() {
           </div>
         </section>
 
-        <Product />
+        <Product/>
         
         
     </div>

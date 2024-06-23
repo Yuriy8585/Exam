@@ -1,20 +1,24 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
-function AddItem() {
-  const [cart, setCart] = useState({});
+function AddItem(props) {
+    const [cart, setCart] = useState({});
 
-  const addToCart = (itemId, quantity) => {
-    setCart({
-      ...cart,
-      [itemId]: (cart[itemId] || 0) + quantity
-    });
-  };
+    const addToCart = (itemId, quantity) => {
+        setCart({
+            ...cart,
+            [itemId]: (cart[itemId] || 0) + quantity
 
-  return (
-    <div>
-      <button onClick={() => addToCart(1, 1)}>Add to cart</button>
-    </div>
-  );
+        });
+
+        props.onGistsArrayChange(cart)
+        console.log("props", props.gistsArray)
+    };
+
+    return (
+        <div>
+            <button onClick={() => addToCart(1, 1)}>Add to cart</button>
+        </div>
+    );
 }
 
 export default AddItem;

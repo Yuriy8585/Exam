@@ -1,8 +1,9 @@
 import React from 'react';
 import AddItem from '../AddtoCart';
+import photo from '../../../'
 
 
-function MenTools() {
+function MenTools(props) {
   return (
     <div>
      
@@ -94,7 +95,7 @@ function MenTools() {
                   </form> 
                                                 */}
           Add to cart
-          <AddItem/>
+          <AddItem gistsArray={props.gistsArray}/>
         </a>
       </div>
     </div>

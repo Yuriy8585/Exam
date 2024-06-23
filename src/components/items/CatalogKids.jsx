@@ -3,7 +3,7 @@ import SideMenu from './SideMenu';
 import Filter from '../Filter';
 import KidsTools from './tools/Kids';
 
-function CatalogKids() {
+function CatalogKids(props) {
   return (
     <div>
      

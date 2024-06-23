@@ -4,7 +4,7 @@ import SideMenu from './SideMenu';
 import Filter from '../Filter';
 import WomenTools from './tools/Women';
 
-function CatalogWomen() {
+function CatalogWomen(props) {
   return (
     <div>
      

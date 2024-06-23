@@ -1,7 +1,7 @@
 import React from 'react';
 import AddItem from './AddtoCart';
 
-function Product () {
+function Product (props) {
 
     return (
         <div>
@@ -52,7 +52,7 @@ function Product () {
           />
         </svg>
         Add to Cart
-        <AddItem/>
+        <AddItem props/>
       </a>
     </div>
     <div className="product product__new">
