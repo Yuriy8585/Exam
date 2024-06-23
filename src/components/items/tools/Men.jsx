@@ -1,6 +1,5 @@
 import React from 'react';
 import AddItem from '../AddtoCart';
-import photo from '../../../'
 
 
 function MenTools(props) {
