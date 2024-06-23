@@ -1,6 +1,6 @@
 import React from 'react';
 import AddItem from '../AddtoCart';
-
+import product1 from '../../../img/product1.jpg';
 
 function MenTools(props) {
   return (
@@ -50,6 +50,8 @@ function MenTools(props) {
     </div>
     <div className="product">
       <img className="product__img" src="img/product1.jpg" alt="" />
+      
+      <img className="product__img" src={product1} alt="product1"/>
       <div className="product__content">
         <a href="product.html" className="product__heading">
           ELLERY X M'O CAPSULE

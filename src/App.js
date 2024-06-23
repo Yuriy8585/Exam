@@ -14,8 +14,8 @@ import Registration from './components/Registration';
 import Catalog from './components/items/Catalog';
 import CatalogWomen from './components/items/CatalogWom';
 import CatalogKids from './components/items/CatalogKids';
-
 import logo from './img/logo.png';
+import search from './img/search.svg';
 
 const NameContext = React.createContext();
 
@@ -29,31 +29,30 @@ function App() {
                 <div className="App">
                     <BrowserRouter>
 
-                        <header className="header center">
-                            <div className="header__left">
-                                <a href="index.html">
-                                    {/*<img src="/my-app/src/i/logo.png" alt="logo"/>*/}
-                                    <img src={logo} alt="logo"/>
-                                </a>
-                                <a href="#">
-                                    <img src="/my-app/src/img/search.svg" alt="search"/>
-                                </a>
-                            </div>
-                            <nav className="header__right">
-                                <label htmlFor="header__check">
-                                    <Button>
-                                        <SideMenu/>
-                                    </Button>
-
-
-                                </label>
-                                <a className=" header__link-site" href=" registration.html">
-                                    <img src="../img/reg.svg" alt=" "/>
-                                    <Link className="Registration" to="/REGISTRATION">Log in</Link>
-                                </a>
-                                <a className=" header__link-site" href="./Cart">
-
-                                    <img src="../img/cart.svg" alt=""/>
+                    <header className="header center">
+                        <div className="header__left">
+                            <a href="index.html">
+                            <img src={logo} alt="logo"/>
+                            </a>
+                            <a href="#">
+                            <img src={search} alt="search"/>
+                            </a>
+                        </div>
+                        <nav className="header__right">
+                            <label htmlFor="header__check">
+                            <Button><SideMenu/></Button>
+                                   
+                                
+                                
+                                
+                            </label>
+                            <a className=" header__link-site" href=" registration.html">
+                                <img src="/my-app/src/img/reg.svg" alt=" "/>
+                                <Link className="Registration" to="/REGISTRATION">Log in</Link>
+                            </a>
+                            <a className=" header__link-site" href="./Cart">
+                                
+                                    <img src="/my-app/src/img/cart.svg" alt=""/>
                                     <Link className="Cart" to="/CART">Cart</Link>
 
                                 </a>

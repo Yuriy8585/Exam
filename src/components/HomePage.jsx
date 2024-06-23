@@ -1,6 +1,13 @@
 import React from 'react';
 import Filter from './Filter';
 import Product from './items/Product';
+import promo from '../img/promo.png';
+import si1 from '../img/si1.jpg';
+import si2 from '../img/si2.jpg';
+import si3 from '../img/si3.jpg';
+import sibig from '../img/sibig.jpg';
+
+
 
 
 function HomePage() {
@@ -13,7 +20,7 @@ function HomePage() {
       
         <section className="promo">
           <div className="promo__img">
-            <img src="/my-app/src/img/promo.png" alt="photo promo" />
+            <img src={promo} alt="photo_promo"/>
           </div>
           <div className="promo__content">
             <div className="promo__info">
@@ -25,7 +32,8 @@ function HomePage() {
         <section className="sale center">
           <div className="sale__item">
             <a className="header__link-site" href="catalog_w.html">
-              <img src="/my-app/src/img/si1.jpg" alt="sale image" />
+              
+              <img src={si1} alt="photo_promo"/>
             </a>
             <div className="sale__content">
               <p className="sale__text">30% OFF</p>
@@ -33,21 +41,24 @@ function HomePage() {
             </div>
           </div>
           <div className="sale__item">
-            <img src="img/si2.jpg" alt="sale image" />
+            
+            <img src={si2} alt="photo_promo"/>
             <div className="sale__content">
               <p className="sale__text">30% OFF</p>
               <h3 className="sale__heading">FOR WOMEN</h3>
             </div>
           </div>
           <div className="sale__item">
-            <img src="img/si3.jpg" alt="sale image" />
+            
+            <img src={si3} alt="photo_promo"/>
             <div className="sale__content">
               <p className="sale__text">30% OFF</p>
               <h3 className="sale__heading">FOR WOMEN</h3>
             </div>
           </div>
           <div className="sale__item sale__item_big">
-            <img src="img/sibig.jpg" alt="sale image" />
+            
+            <img src={sibig} alt="photo_promo"/>
             <div className="sale__content">
               <p className="sale__text">30% OFF</p>
               <h3 className="sale__heading">FOR WOMEN</h3>
