@@ -1,11 +1,11 @@
 import React from 'react';
 import Filter from './Filter';
 import Product from './items/Product';
-import promo from './img/promo.png';
-import si1 from './img/si1.jpg';
-import si2 from './img/si2.jpg';
-import si3 from './img/si3.jpg';
-import sibig from './img/sibig.jpg';
+import promo from '../img/promo.png';
+import si1 from '../img/si1.jpg';
+import si2 from '../img/si2.jpg';
+import si3 from '../img/si3.jpg';
+import sibig from '../img/sibig.jpg';
 
 
 
