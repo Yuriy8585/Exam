@@ -17,7 +17,6 @@ import CatalogKids from './components/items/CatalogKids';
 import logo from './img/logo.png';
 import search from './img/search.svg';
 
-const NameContext = React.createContext();
 
 function App() {
     const [gistsArray, setGistsArray] = useState([]);
@@ -25,66 +24,57 @@ function App() {
     return (
 
         <div>
-            <NameContext.Provider value={{gistsArray, setGistsArray}}>
-                <div className="App">
-                    <BrowserRouter>
+            <div className="App">
+                <BrowserRouter>
 
                     <header className="header center">
                         <div className="header__left">
                             <a href="index.html">
-                            <img src={logo} alt="logo"/>
+                                <img src={logo} alt="logo"/>
                             </a>
                             <a href="#">
-                            <img src={search} alt="search"/>
+                                <img src={search} alt="search"/>
                             </a>
                         </div>
                         <nav className="header__right">
                             <label htmlFor="header__check">
-                            <Button><SideMenu/></Button>
-                                   
-                                
-                                
-                                
+                                <Button><SideMenu/></Button>
+
+
                             </label>
                             <a className=" header__link-site" href=" registration.html">
                                 <img src="/my-app/src/img/reg.svg" alt=" "/>
                                 <Link className="Registration" to="/REGISTRATION">Log in</Link>
                             </a>
                             <a className=" header__link-site" href="./Cart">
-                                
-                                    <img src="/my-app/src/img/cart.svg" alt=""/>
-                                    <Link className="Cart" to="/CART">Cart</Link>
 
-                                </a>
+                                <img src="/my-app/src/img/cart.svg" alt=""/>
+                                <Link className="Cart" to="/CART">Cart</Link>
 
-                            </nav>
-                            <input className=" header__checkbox" id=" header__check" type=" checkbox"/>
+                            </a>
 
-                        </header>
-                        <Breadcrumbs/>
+                        </nav>
+                        <input className=" header__checkbox" id=" header__check" type=" checkbox"/>
 
-                        <Routes>
-                            <Route path="/" element={<Home/>}/>
-                            <Route path="/HOME" element={<Home/>}/>
-                            <Route path="/CART"
-                                   element={<Cart gistsArray={gistsArray}/>}/>
+                    </header>
+                    <Breadcrumbs/>
 
-                            <Route path="/MEN" element={<Catalog gistsArray={gistsArray}
-                                                                 onGistsArrayChange={(newGistsArray) => setGistsArray(newGistsArray)}/>}/>
-                            <Route path="/WOMEN" element={<CatalogWomen gistsArray={gistsArray}
-                                                                        onGistsArrayChange={(newGistsArray) => setGistsArray(newGistsArray)}/>}/>
-                            <Route path="/KIDS" element={<CatalogKids gistsArray={gistsArray}
-                                                                      onGistsArrayChange={(newGistsArray) => setGistsArray(newGistsArray)}/>}/>
-                            <Route path="/NEW ARRIVALS" element={<div>NEW ARRIVALS</div>}/>
-                            <Route path="/REGISTRATION" element={<Registration/>}/>
-                            <Route path="/404" element={<Page404/>}/>
-                            <Route path="*" element={<Navigate replace to="/404"/>}/>
-                        </Routes>
+                    <Routes>
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/HOME" element={<Home/>}/>
+                        <Route path="/CART" element={<Cart/>}/>
+                        <Route path="/MEN" element={<Catalog gistsArray={gistsArray}/>}/>
+                        <Route path="/WOMEN" element={<CatalogWomen gistsArray={gistsArray}/>}/>
+                        <Route path="/KIDS" element={<CatalogKids gistsArray={gistsArray}/>}/>
+                        <Route path="/NEW ARRIVALS" element={<div>NEW ARRIVALS</div>}/>
+                        <Route path="/REGISTRATION" element={<Registration/>}/>
+                        <Route path="/404" element={<Page404/>}/>
+                        <Route path="*" element={<Navigate replace to="/404"/>}/>
+                    </Routes>
 
-                    </BrowserRouter>
-                    <Footer/>
-                </div>
-            </NameContext.Provider>
+                </BrowserRouter>
+                <Footer/>
+            </div>
         </div>
     )
 }

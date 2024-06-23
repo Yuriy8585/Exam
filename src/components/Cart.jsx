@@ -1,6 +1,7 @@
 import GistsList, {API_URL_PUBLIC} from './items/GistsList';
 import React, {useCallback, useEffect, useState} from "react";
 import CircularProgress from "@mui/material/CircularProgress";
+import {connect} from "react-redux";
 
 
 function Cart(props) {
@@ -8,13 +9,22 @@ function Cart(props) {
 
     {/*<GistsList />*/
     }
-    const [gists, setGists] = useState([]);
+    const [gists, setGists] = useState(useState({id: 0, description: ""}));
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(true);
+
     const requestGists = async () => {
         setLoading(true);
         try {
-            setGists(props.gistsArray);
+            console.log("props.cart", props.cart);
+            const cartProps = props.cart
+            console.log("cartProps", cartProps);
+            setGists(prevState => ({
+                ...prevState,
+                id: props.cart.id,
+                description: props.cart.description
+            }));
+            console.log("gists", gists);
         } catch (err) {
             setError(true);
             console.warn(err);
@@ -63,4 +73,11 @@ function Cart(props) {
 }
 
 
-export default Cart;
+const mapStateToProps = (state) => {
+    console.log("mapStateToProps ", state.gistReducer.cart)
+    return {
+        cart: state.gistReducer.cart
+    }
+}
+
+export default connect(mapStateToProps)(Cart);

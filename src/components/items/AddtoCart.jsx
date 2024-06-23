@@ -1,17 +1,18 @@
 import React, {useState} from 'react';
+import {connect} from 'react-redux';
 
 function AddItem(props) {
-    const [cart, setCart] = useState({});
+    const [cart, setCart] = useState({id: 0, description: ""});
+
 
     const addToCart = (itemId, quantity) => {
         setCart({
             ...cart,
-            [itemId]: (cart[itemId] || 0) + quantity
-
+            id: itemId,
+            description: (cart[itemId] || 0) + quantity + " description"
         });
-
-        props.onGistsArrayChange(cart)
-        console.log("props", props.gistsArray)
+        console.log("cart", cart);
+        props.submitToStore(cart);
     };
 
     return (
@@ -21,4 +22,14 @@ function AddItem(props) {
     );
 }
 
-export default AddItem;
+const mapDispatchToProps = (dispatch) => ({
+    // this will be injected in child component props
+    submitToStore: (input) => dispatch({type: 'INPUT', payload: input}),
+});
+
+
+export default connect(null, mapDispatchToProps)(AddItem);
+
+
+
+
