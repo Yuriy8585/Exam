@@ -16,6 +16,10 @@ import CatalogWomen from './components/items/CatalogWom';
 import CatalogKids from './components/items/CatalogKids';
 import logo from './img/logo.png';
 import search from './img/search.svg';
+import registration from './img/reg.svg';
+import cart from './img/cart.svg';
+import menu from './img/menu.svg'
+
 
 const NameContext = React.createContext();
 
@@ -31,29 +35,32 @@ function App() {
 
                     <header className="header center">
                         <div className="header__left">
-                            <a href="index.html">
+                            <a href="/">
                             <img src={logo} alt="logo"/>
                             </a>
-                            <a href="#">
+                            <a href="./MENU">
                             <img src={search} alt="search"/>
                             </a>
                         </div>
                         <nav className="header__right">
                             <label htmlFor="header__check">
-                            <Button><SideMenu/></Button>
-                                   
-                                
-                                
-                                
+                            
+                            <Button>
+                                <img src={menu} alt="Menu"/>
+                                <SideMenu/>
+                                </Button>
+                           
                             </label>
-                            <a className=" header__link-site" href=" registration.html">
-                                <img src="/my-app/src/img/reg.svg" alt=" "/>
-                                <Link className="Registration" to="/REGISTRATION">Log in</Link>
-                            </a>
-                            <a className=" header__link-site" href="./Cart">
+                            <a className=" header__link-site" href="./REGISTRATION">
                                 
-                                    <img src="/my-app/src/img/cart.svg" alt=""/>
-                                    <Link className="Cart" to="/CART">Cart</Link>
+                                <img src={registration} alt="registration"/>
+                                <Link className="Registration" to="/REGISTRATION"> Log in </Link>
+                            </a>
+                            <a className=" header__link-site" href="./CART">
+                                
+                                    
+                                    <img src={cart} alt="cart"/>
+                                    <Link className="Cart" to="/CART"> Cart </Link>
 
                                 </a>
 
@@ -66,6 +73,7 @@ function App() {
                         <Routes>
                             <Route path="/" element={<Home/>}/>
                             <Route path="/HOME" element={<Home/>}/>
+                            <Route path="/MENU" element={<SideMenu/>}/>
                             <Route path="/CART"
                                    element={<Cart gistsArray={gistsArray}/>}/>
 

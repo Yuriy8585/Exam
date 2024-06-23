@@ -845,6 +845,7 @@ summary::-webkit-details-marker {
 }
 
 .button {
+  -webkit-box-align: center;
   width: 212px;
   height: 18px;
   display: -webkit-box;
@@ -882,6 +883,8 @@ summary::-webkit-details-marker {
 .button:hover path {
   fill: white;
 }
+
+
 
 .slider {
   height: 777px;

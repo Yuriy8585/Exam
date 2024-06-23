@@ -1,6 +1,9 @@
 import React from 'react';
 import AddItem from '../AddtoCart';
 import product1 from '../../../img/product1.jpg';
+import product5 from '../../../img/product5.jpg';
+import product3 from '../../../img/product3.jpg';
+import product4 from '../../../img/product4.jpg';
 
 function MenTools(props) {
   return (
@@ -13,9 +16,9 @@ function MenTools(props) {
       <section className="product-box center">
   <div className="product-box__content">
     <div className="product">
-      <img className="product__img" src="img/product1.jpg" alt="" />
+    <img className="product__img" src={product1} alt="product1"/>
       <div className="product__content">
-        <a href="product.html" className="product__heading">
+        <a className="product__heading">
           ELLERY X M'O CAPSULE
         </a>
         <p className="product__text">
@@ -45,15 +48,15 @@ function MenTools(props) {
             fill="white"
           />
         </svg>
-        Add to Cart
+        <AddItem gistsArray={props.gistsArray}/>
       </a>
     </div>
     <div className="product">
       <img className="product__img" src="img/product1.jpg" alt="" />
       
-      <img className="product__img" src={product1} alt="product1"/>
+      <img className="product__img" src={product5} alt="product1"/>
       <div className="product__content">
-        <a href="product.html" className="product__heading">
+        <a className="product__heading">
           ELLERY X M'O CAPSULE
         </a>
         <p className="product_name"> Product 2</p>
@@ -65,7 +68,7 @@ function MenTools(props) {
         <div id="goods" />
         <div id="cart" />
         <div className="product__add" />
-        <a href="cart.html?productId=123" className="product__add">
+        <a  className="product__add">
           <svg
             className="product_img"
             width={27}
@@ -88,22 +91,15 @@ function MenTools(props) {
             />
           </svg>
           <div />
-          {/*
-                  <form method="post" action="cart.html">
-                      <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-                      <input min="1" type="number" id="quantity" name="quantity" value="1" />
-                      <input type="submit" value="Add to cart" class="input-basket-submit" />
-                  </form> 
-                                                */}
-          Add to cart
           <AddItem gistsArray={props.gistsArray}/>
+          
         </a>
       </div>
     </div>
     <div className="product">
-      <img className="product__img" src="img/product1.jpg" alt="" />
+      <img className="product__img" src={product3} alt="product1"/>
       <div className="product__content">
-        <a href="product.html" className="product__heading">
+        <a className="product__heading">
           ELLERY X M'O CAPSULE
         </a>
         <p className="product__text">
@@ -133,13 +129,13 @@ function MenTools(props) {
             fill="white"
           />
         </svg>
-        Add to Cart
+        <AddItem gistsArray={props.gistsArray}/>
       </a>
     </div>
     <div className="product">
-      <img className="product__img" src="img/product1.jpg" alt="" />
+      <img className="product__img" src={product4} alt="product1"/>
       <div className="product__content">
-        <a href="product.html" className="product__heading">
+        <a className="product__heading">
           ELLERY X M'O CAPSULE
         </a>
         <p className="product__text">
@@ -169,13 +165,13 @@ function MenTools(props) {
             fill="white"
           />
         </svg>
-        Add to Cart
+        <AddItem gistsArray={props.gistsArray}/>
       </a>
     </div>
     <div className="product">
       <img className="product__img" src="img/product1.jpg" alt="" />
       <div className="product__content">
-        <a href="product.html" className="product__heading">
+        <a className="product__heading">
           ELLERY X M'O CAPSULE
         </a>
         <p className="product__text">

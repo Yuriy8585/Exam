@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const Breadcrumbs = (props) => {
     return (<section className="head center">
-        <h2 className="head__heading">WELCOME</h2>
+        <h2 className="head__heading"> WELCOME </h2>
         <div className="breadcrumb">
             <div className="breadcrumb__box-link">
                 <Link className="breadcrumb__link" to="/HOME">HOME</Link>
