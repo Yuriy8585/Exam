@@ -105,7 +105,7 @@ function Cart(props) {
                     </div>
                 </section>
             
-            <ul>{gists.map(renderGist)}</ul>
+            {/*<ul>{gists.map(renderGist)}</ul>*/}
             <h1>{gists.id}<p className="product_name"></p></h1>
             <h2>{gists.description}<p className="product-description"></p></h2>
 
