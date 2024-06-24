@@ -1,5 +1,5 @@
 import React from 'react';
-import Filter from './Filter';
+
 import Product from './items/Product';
 import promo from '../img/promo.png';
 import si1 from '../img/si1.jpg';
@@ -16,7 +16,7 @@ function HomePage() {
     
   
   
-      <Filter />
+      
       
         <section className="promo">
           <div className="promo__img">

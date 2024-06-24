@@ -1,5 +1,5 @@
 import React from 'react';
-
+import productw1 from '../../../img/productw1.png';
 
 function WomenTools() {
   return (
@@ -10,11 +10,7 @@ function WomenTools() {
       <section className="product-box center">
   <div className="product-box__content">
     <div className="product">
-      <img
-        className="product__img"
-        src="https://w7.pngwing.com/pngs/449/543/png-transparent-model-female-fashion-celebrities-photography-fashion-thumbnail.png"
-        alt=""
-      />
+    <img className="product__img" src={productw1} alt="product1"/>
       <div className="product__content">
         <a href="product.html" className="product__heading">
           ELLERY X M'O CAPSULE
